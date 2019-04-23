@@ -1,0 +1,5 @@
+body,
+html,
+#root {
+  @apply min-h-screen;
+}

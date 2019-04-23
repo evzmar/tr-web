@@ -1,0 +1,58 @@
+{
+  "name": "tr-web",
+  "version": "0.1.0",
+  "private": true,
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "dependencies": {
+    "@material-ui/core": "^3.9.3",
+    "@material-ui/icons": "^3.0.2",
+    "autoprefixer": "^9.5.1",
+    "axios": "^0.18.0",
+    "classnames": "^2.2.6",
+    "dotenv": "^7.0.0",
+    "formstate": "^1.1.1",
+    "jss": "^9.8.7",
+    "mobx": "^5.9.4",
+    "mobx-react": "^5.4.3",
+    "mobx-router": "^0.0.20",
+    "postcss-cli": "^6.1.2",
+    "postcss-import": "^12.0.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-jss": "^8.6.1",
+    "react-scripts": "3.0.0",
+    "tailwindcss": "^0.7.4"
+  },
+  "scripts": {
+    "build:css": "postcss src/styles/index.css -o src/index.css",
+    "watch:css": "postcss src/styles/index.css -o src/index.css -w",
+    "start": "npm run watch:css & react-scripts start",
+    "build": "npm run build:css && react-scripts build && cp build/index.html build/404.html",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "husky": "^1.3.1",
+    "prettier": "^1.17.0",
+    "pretty-quick": "^1.10.0"
+  }
+}
